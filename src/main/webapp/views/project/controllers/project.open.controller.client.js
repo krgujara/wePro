@@ -5,6 +5,7 @@
 
     function openProjectController(OpenProjectService) {
         var vm = this;
+        vm.applyJob = applyJob;
 
         function init() {
             vm.getOpenProjectsList = undefined;
@@ -17,9 +18,14 @@
             OpenProjectService.getAllProjects("OPEN")
                 .then(function (projects) {
                     vm.getOpenProjectsList = projects.data;
-                    console.log(vm.getOpenProjectsList);
                 });
         }
+
+
+        function applyJob(project) {
+
+        }
+
     }
 
 })();

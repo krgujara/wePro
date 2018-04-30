@@ -9,7 +9,8 @@
             getAllTopics : getAllTopics,
             addTopic : addTopic,
             updateProfile : updateProfile,
-            getProfile : getProfile
+            getProfile : getProfile,
+            getAllSkills : getAllSkills
         }
 
         return api;
@@ -26,6 +27,9 @@
         }
         function getProfile(userId){
             return $http.get("/userprofile/getprofile/"+1);
+        }
+        function getAllSkills() {
+            return $http.get("/skills/all");
         }
     }
 })();
